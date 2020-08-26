@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 
-import db from "../database/connectio";
+import db from "../database/connection";
 
 class ConnectionsController {
   async getConnections(req: Request, res: Response) {
