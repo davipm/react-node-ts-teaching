@@ -116,4 +116,4 @@ dist
 .pnp.*
 
 .idea
-database/database,sqlite
+database/database.sqlite
