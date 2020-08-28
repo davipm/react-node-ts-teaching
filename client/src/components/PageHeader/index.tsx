@@ -8,7 +8,7 @@ import { Container, TopBarContainer, HeaderContent } from "./styles";
 interface PageHeaderProps {
   title: string;
   description?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 function PageHeader({ title, description, children }: PageHeaderProps) {
