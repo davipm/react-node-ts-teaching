@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 export const Container = styled.div`
-  position: revert;
+  position: relative;
 
   & + & {
     margin-top: 1.4rem;
@@ -19,8 +19,10 @@ export const Container = styled.div`
     font: 1.6rem Archivo;
     border: 1px solid var(--color-line-in-white);
     border-radius: 0.8rem;
-    background-color: var(--color-input-background);
+    background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png")
+      var(--color-input-background) no-repeat 98% center;
     outline: 0;
+    appearance: none;
   }
 
   :focus-within::after {
