@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 export const Container = styled.div`
-  position: revert;
+  position: relative;
 
   & + & {
     margin-top: 1.4rem;
