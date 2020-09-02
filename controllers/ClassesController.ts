@@ -10,6 +10,12 @@ interface ScheduleItem {
 }
 
 class ClassesController {
+  /**
+   * Get all classes
+   *
+   * @param req
+   * @param res
+   */
   async getClasses(req: Request, res: Response) {
     const filters = req.query;
     const subject = filters.subject as string;
@@ -40,6 +46,12 @@ class ClassesController {
     return res.json(classes);
   }
 
+  /**
+   * Create classes
+   *
+   * @param req
+   * @param res
+   */
   async createClasses(req: Request, res: Response) {
     const { name, avatar, whatsapp, bio, subject, cost, schedule } = req.body;
     const trx = await db.transaction();
@@ -62,6 +74,9 @@ class ClassesController {
 
       const class_id = insertedClassesIds[0];
 
+      /**
+       * create array with schedule items and convert time
+       */
       const classSchedule = schedule.map((scheduleItem: ScheduleItem) => {
         return {
           class_id,
