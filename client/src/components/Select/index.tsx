@@ -17,7 +17,7 @@ function Select({ name, label, options, ...rest }: SelectProps) {
       <label htmlFor={name}>{label}</label>
       <select value="" id={name} {...rest}>
         <option value="" disabled hidden>
-          Selecione uma opção
+          Select an option
         </option>
 
         {options.map((option) => (

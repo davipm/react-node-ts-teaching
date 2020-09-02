@@ -113,20 +113,20 @@ function TeacherForm() {
 
             <Select
               name="subject"
-              label="Materia"
+              label="Subject"
               value={subject}
               onChange={(event) => setSubject(event.target.value)}
               options={[
-                { value: "Artes", label: "Artes" },
-                { value: "Biologia", label: "Biologia" },
-                { value: "Ciências", label: "Ciências" },
-                { value: "Educação física", label: "Educação física" },
-                { value: "Física", label: "Física" },
-                { value: "Geografia", label: "Geografia" },
-                { value: "História", label: "História" },
-                { value: "Matemática", label: "Matemática" },
-                { value: "Português", label: "Português" },
-                { value: "Química", label: "Química" },
+                { value: "Arts", label: "Arts" },
+                { value: "Biology", label: "Biology" },
+                { value: "Science", label: "Science" },
+                { value: "Physical Education", label: "Physical Education" },
+                { value: "Physics", label: "Physics" },
+                { value: "Geography", label: "Geography" },
+                { value: "Story", label: "Story" },
+                { value: "Mathematics", label: "Mathematics" },
+                { value: "Language", label: "Language" },
+                { value: "Chemistry", label: "Chemistry" },
               ]}
             />
 
@@ -140,8 +140,8 @@ function TeacherForm() {
 
           <fieldset>
             <legend>
-              Horários disponíveis{" "}
-              <button onClick={addNewScheduleItem}>+ Novo horário</button>
+              Available times{" "}
+              <button onClick={addNewScheduleItem}>+ New time</button>
             </legend>
 
             {scheduleItems.map((scheduleItem, index) => (
@@ -154,19 +154,19 @@ function TeacherForm() {
                     setScheduleItemValue(index, "ween_day", event.target.value)
                   }
                   options={[
-                    { value: "0", label: "Domingo" },
-                    { value: "1", label: "Segunda-feira" },
-                    { value: "2", label: "Terça-feira" },
-                    { value: "3", label: "Quarta-feira" },
-                    { value: "4", label: "Quinta-feira" },
-                    { value: "5", label: "Sexta-feira" },
-                    { value: "6", label: "Sábado" },
+                    { value: "0", label: "Sunday" },
+                    { value: "1", label: "Monday" },
+                    { value: "2", label: "Tuesday" },
+                    { value: "3", label: "Wednesday" },
+                    { value: "4", label: "Thursday" },
+                    { value: "5", label: "Friday" },
+                    { value: "6", label: "Saturday" },
                   ]}
                 />
 
                 <Input
                   name="from"
-                  label="Das"
+                  label="From"
                   type="time"
                   value={scheduleItem.from}
                   onChange={(event) =>
@@ -176,7 +176,7 @@ function TeacherForm() {
 
                 <Input
                   name="to"
-                  label="Ate"
+                  label="To"
                   type="time"
                   value={scheduleItem.to}
                   onChange={(event) =>
@@ -186,11 +186,11 @@ function TeacherForm() {
 
                 <footer>
                   <p>
-                    <img src={warningIcon} alt="Aviso importante" />
-                    Importante! <br />
-                    Preencha todos os dados
+                    <img src={warningIcon} alt="Important warning" />
+                    Important! <br />
+                    Fill in all the details
                   </p>
-                  <button type="submit">Salvar cadastro</button>
+                  <button type="submit">Save registration</button>
                 </footer>
               </ScheduleItem>
             ))}
