@@ -67,7 +67,7 @@ export const HeaderContent = styled.div`
     max-width: 30rem;
     font-size: 1.6rem;
     line-height: 2.6rem;
-    color: var(--color-in-primary);
+    color: var(--color-title-in-primary);
     margin-top: 2.4rem;
   }
 `;
