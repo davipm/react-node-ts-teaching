@@ -63,7 +63,7 @@ function TeacherForm() {
       alert("Successful registration!");
       history.push("/");
     } catch (error) {
-      alert("Error");
+      alert(`Error ${error}`);
     }
   }
 

@@ -117,6 +117,7 @@ export const Container = styled.section`
         cursor: pointer;
         font: 700 1.6rem Archivo;
         display: flex;
+        align-items: center;
         justify-content: center;
         text-decoration: none;
         transition: background-color 0.2s;
@@ -124,7 +125,7 @@ export const Container = styled.section`
 
         @media (min-width: 700px) {
           width: 20rem;
-          margin-bottom: 0;
+          margin-top: 0;
         }
 
         :hover {
