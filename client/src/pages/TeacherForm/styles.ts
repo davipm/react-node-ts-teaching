@@ -7,16 +7,15 @@ import { Container as Select } from "../../components/Select/styles";
 export const Container = styled.section`
   width: 100vw;
   height: 100vh;
-  max-width: 100vw;
 
-  @media (max-width: 700px) {
+  @media (min-width: 700px) {
     max-width: 100vw;
   }
 
   ${HeaderContent} {
     margin-bottom: 6.4rem;
 
-    @media (max-width: 700px) {
+    @media (min-width: 700px) {
       margin-bottom: 0;
     }
   }
@@ -31,10 +30,11 @@ export const Container = styled.section`
     overflow: hidden;
 
     fieldset {
+      margin: 0;
       padding: 0 2.4rem;
       border: 0;
 
-      @media (max-width: 700px) {
+      @media (min-width: 700px) {
         padding: 0 6.4rem;
       }
 
@@ -83,7 +83,7 @@ export const Container = styled.section`
       border-top: 1px solid var(--color-line-in-white);
       margin-top: 6.4rem;
 
-      @media (max-width: 700px) {
+      @media (min-width: 700px) {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -98,7 +98,7 @@ export const Container = styled.section`
         line-height: 2.4rem;
         color: var(--color-text-complement);
 
-        @media (max-width: 700px) {
+        @media (min-width: 700px) {
           justify-content: space-between;
         }
 
@@ -122,7 +122,7 @@ export const Container = styled.section`
         transition: background-color 0.2s;
         margin-top: 3.2rem;
 
-        @media (max-width: 700px) {
+        @media (min-width: 700px) {
           width: 20rem;
           margin-bottom: 0;
         }
@@ -136,7 +136,7 @@ export const Container = styled.section`
 `;
 
 export const ScheduleItem = styled.div`
-  @media (max-width: 700px) {
+  @media (min-width: 700px) {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     column-gap: 1.6rem;

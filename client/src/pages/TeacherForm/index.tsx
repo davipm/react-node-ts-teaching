@@ -183,18 +183,18 @@ function TeacherForm() {
                     setScheduleItemValue(index, "to", event.target.value)
                   }
                 />
-
-                <footer>
-                  <p>
-                    <img src={warningIcon} alt="Important warning" />
-                    Important! <br />
-                    Fill in all the details
-                  </p>
-                  <button type="submit">Save registration</button>
-                </footer>
               </ScheduleItem>
             ))}
           </fieldset>
+
+          <footer>
+            <p>
+              <img src={warningIcon} alt="Important warning" />
+              Important! <br />
+              Fill in all the details
+            </p>
+            <button type="submit">Save registration</button>
+          </footer>
         </form>
       </main>
     </Container>
