@@ -80,11 +80,11 @@ export const Button = styled.a<ButtonProps>`
       : null}
 `;
 
-export const TotalConnections = styled.div`
+export const TotalConnections = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 
   img {
     margin-left: 0.8rem;
