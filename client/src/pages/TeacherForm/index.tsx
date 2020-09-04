@@ -151,7 +151,7 @@ function TeacherForm() {
                   label="Day of the week"
                   value={scheduleItem.week_day}
                   onChange={(event) =>
-                    setScheduleItemValue(index, "ween_day", event.target.value)
+                    setScheduleItemValue(index, "week_day", event.target.value)
                   }
                   options={[
                     { value: "0", label: "Sunday" },
