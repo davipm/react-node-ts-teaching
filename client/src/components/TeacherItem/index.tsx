@@ -1,11 +1,11 @@
 import React from "react";
 
-import whatsappIcon from "../../assets/images/whatsapp.svg";
+import whatsappIcon from "../../assets/images/icons/whatsapp.svg";
 import { Container } from "./styles";
 
 import api from "../../services/api";
 
-type Teacher = {
+export type Teacher = {
   teacher: {
     id: number;
     avatar: string;
