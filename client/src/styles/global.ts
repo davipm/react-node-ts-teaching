@@ -37,13 +37,14 @@ export default createGlobalStyle`
   html,
   body,
   #root {
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
   }
   
   body {
     background-color: var(--color-background);
+    overflow-x: hidden;
   }
   
   #root {

@@ -1,11 +1,11 @@
 import React from "react";
 
-import whatsappIcon from "../../assets/images/whatsapp.svg";
+import whatsappIcon from "../../assets/images/icons/whatsapp.svg";
 import { Container } from "./styles";
 
 import api from "../../services/api";
 
-type Teacher = {
+export type Teacher = {
   teacher: {
     id: number;
     avatar: string;
@@ -38,7 +38,7 @@ function TeacherItem({ teacher }: Teacher) {
 
       <footer>
         <p>
-          Preço/Hora
+          Price / Hour
           <strong>R$ {teacher.cost}</strong>
         </p>
         <a
@@ -46,7 +46,7 @@ function TeacherItem({ teacher }: Teacher) {
           href={`http://wa.me/${teacher.whatsapp}`}
           onClick={createNewConnection}
         >
-          <img src={whatsappIcon} alt="Whatsapp" /> Entrar em contato
+          <img src={whatsappIcon} alt="Whatsapp" /> Get in touch
         </a>
       </footer>
     </Container>
