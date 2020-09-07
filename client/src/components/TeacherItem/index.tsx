@@ -5,19 +5,21 @@ import { Container } from "./styles";
 
 import api from "../../services/api";
 
-export type Teacher = {
-  teacher: {
-    id: number;
-    avatar: string;
-    bio: string;
-    cost: number;
-    name: string;
-    subject: string;
-    whatsapp: string;
-  };
-};
+export interface Teacher {
+  id: number;
+  avatar: string;
+  bio: string;
+  cost: number;
+  name: string;
+  subject: string;
+  whatsapp: string;
+}
 
-function TeacherItem({ teacher }: Teacher) {
+interface TeacherProps {
+  teacher: Teacher;
+}
+
+function TeacherItem({ teacher }: TeacherProps) {
   async function createNewConnection() {
     await api.post("/connections", {
       user_id: teacher.id,
@@ -43,6 +45,7 @@ function TeacherItem({ teacher }: Teacher) {
         </p>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href={`http://wa.me/${teacher.whatsapp}`}
           onClick={createNewConnection}
         >
