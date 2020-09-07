@@ -55,5 +55,25 @@ export const Container = styled.article`
       font-size: 1.6rem;
       color: var(--color-primary);
     }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 20rem;
+      height: 5.6rem;
+      font: 700 1.6rem Archivo;
+      color: var(--color-button-text);
+      text-decoration: none;
+      background-color: var(--color-secundary);
+      border: 0;
+      border-radius: 0.8rem;
+      cursor: pointer;
+      transition: 0.2s;
+
+      :hover {
+        background-color: var(--color-secundary-dark);
+      }
+    }
   }
 `;
