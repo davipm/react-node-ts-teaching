@@ -7,7 +7,7 @@ import Select from "../../components/Select";
 
 import api from "../../services/api";
 
-import { Container } from "./styles";
+import { Container, SearchTeachers } from "./styles";
 
 function TeacherList() {
   const [teachers, setTeachers] = useState([]);
@@ -35,8 +35,8 @@ function TeacherList() {
 
   return (
     <Container>
-      <PageHeader title="Estes são os proffys disponíveis.">
-        <form onSubmit={searchTeachers}>
+      <PageHeader title="These are the available proffys.">
+        <SearchTeachers onSubmit={searchTeachers}>
           <Select
             name="subject"
             label="Subject"
@@ -80,13 +80,13 @@ function TeacherList() {
             value={time}
           />
 
-          <button type="submit">Buscar</button>
-        </form>
+          <button type="submit">Search</button>
+        </SearchTeachers>
       </PageHeader>
 
       <main>
         {teachers.map((teacher: Teacher) => (
-          <TeacherItem key={teacher.teacher.id} {...teacher} />
+          <TeacherItem key={teacher.id} teacher={teacher} />
         ))}
       </main>
     </Container>
