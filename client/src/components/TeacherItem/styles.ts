@@ -12,6 +12,10 @@ export const Container = styled.article`
     align-items: center;
     padding: 3.2rem 2rem;
 
+    @media (min-width: 700px) {
+      padding: 3.2rem;
+    }
+
     img {
       width: 8rem;
       height: 8rem;
@@ -39,6 +43,10 @@ export const Container = styled.article`
     padding: 0 2rem;
     font-size: 1.6rem;
     line-height: 2.8rem;
+
+    @media (min-width: 700px) {
+      padding: 0 3.2rem;
+    }
   }
 
   footer {
@@ -50,10 +58,29 @@ export const Container = styled.article`
     background-color: var(--color-box-footer);
     border: 1px solid var(--color-line-in-white);
 
+    @media (min-width: 700px) {
+      padding: 3.2rem;
+
+      button {
+        width: 24.5rem;
+        font-size: 1.6rem;
+        justify-content: center;
+
+        img {
+          margin-right: 1.6rem;
+        }
+      }
+    }
+
     p strong {
       display: block;
       font-size: 1.6rem;
       color: var(--color-primary);
+
+      @media (min-width: 700px) {
+        display: initial;
+        margin-left: 1.6rem;
+      }
     }
 
     a {
